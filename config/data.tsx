@@ -11,7 +11,7 @@ const data = [
       <Rule rule="S0 → S" key={1} />,
       ", donde S es la variable inicial original.",
     ],
-    videoUrl: "https://youtu.be/eUlUzH9fmXQ",
+    videoUrl: "haBzn2EL63U",
     quiz: {
       question: ["¿S0 debe producir la variable inicial original?"],
       options: [
@@ -27,7 +27,7 @@ const data = [
     },
   },
   {
-    setpNumber: 2,
+    stepNumber: 2,
     stepName: "Remover cadenas vacías.",
     description: [
       "Se remueve una regla de cadena vacía, donde ",
@@ -38,7 +38,7 @@ const data = [
       <Rule rule="R → uAw" key={5} />,
       ", agregamos R → uw",
     ],
-    videoUrl: "https://youtu.be/eUlUzH9fmXQ",
+    videoUrl: "haBzn2EL63U",
     quiz: {
       question: [
         "Una vez removida la ocurrencia de la variable que produce la cadena vacía, ¿qué hay que hacer?",
@@ -56,7 +56,7 @@ const data = [
     },
   },
   {
-    setpNumber: 3,
+    stepNumber: 3,
     stepName: "Remover reglas unitarias.",
     description: [
       "Se remueve una regla ",
@@ -67,7 +67,7 @@ const data = [
       <Rule rule="A → u" key={5} />,
       ".",
     ],
-    videoUrl: "https://youtu.be/eUlUzH9fmXQ",
+    videoUrl: "haBzn2EL63U",
     quiz: {
       question: ["Elige un ejemplo de regla unitaria:"],
       options: [
@@ -91,7 +91,7 @@ const data = [
     },
   },
   {
-    setpNumber: 4,
+    stepNumber: 4,
     stepName: "Transformamos reglas con tres o más elementos",
     description: [
       "Remplazamos cada regla del tipo ",
@@ -104,7 +104,7 @@ const data = [
       <Rule rule="A(k-2) → U(k-1)Ak" key={7} />,
       ".",
     ],
-    videoUrl: "https://youtu.be/eUlUzH9fmXQ",
+    videoUrl: "haBzn2EL63U",
     quiz: {
       question: [
         "Si ",
@@ -134,14 +134,14 @@ const data = [
     },
   },
   {
-    setpNumber: 5,
+    stepNumber: 5,
     stepName: "Removemos terminales juntas con variables.",
     description: [
       "Cambiar cada terminal α por A y agregamos la regla ",
       <Rule rule="A → α" key={1} />,
       ".",
     ],
-    videoUrl: "https://youtu.be/eUlUzH9fmXQ",
+    videoUrl: "haBzn2EL63U",
     quiz: {
       question:
         "¿Qué se hace en el caso de que se necesite crear una variable para la terminal α, pero la variable A ya existe?",
