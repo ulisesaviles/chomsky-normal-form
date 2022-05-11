@@ -51,7 +51,7 @@ export default function Home() {
 
         {/* Steps */}
         {steps.map((step) => (
-          <div className={styles.stepContainer}>
+          <div className={styles.stepContainer} key={step.stepName}>
             {/* Number */}
             <h4 className={styles.stepNumber}>Step {step.stepNumber}</h4>
             {/* Title */}
