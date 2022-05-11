@@ -7,8 +7,12 @@ import Head from "next/head";
 // Styles
 import styles from "../styles/pages/Home.module.css";
 
-// Compoents
+// Componets
 import Rule from "../components/rule";
+import YoutubeEmbed from "../components/YoutubeEmbed";
+
+// Data to render
+import steps from "../config/data";
 
 // Main component to export
 export default function Home() {
@@ -46,6 +50,27 @@ export default function Home() {
         </div>
 
         {/* Steps */}
+        {steps.map((step) => (
+          <div className={styles.stepContainer}>
+            {/* Number */}
+            <h4 className={styles.stepNumber}>Step {step.stepNumber}</h4>
+            {/* Title */}
+            <h2 className={styles.stepName}>{step.stepName}</h2>
+            {/* Description */}
+            <div className={styles.stepDescription}>{step.description}</div>
+            {/* Video */}
+            <YoutubeEmbed embedId={step.videoUrl} />
+            {/* Quiz */}
+            <div className={styles.quizContainer}>
+              <h3 className={styles.quizQuestion}>{step.quiz.question}</h3>
+              {step.quiz.options.map((option) => (
+                <div key={option.name} className={styles.quizOptionContainer}>
+                  {option.name}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </main>
     </div>
   );
