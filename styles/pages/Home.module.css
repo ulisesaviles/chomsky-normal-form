@@ -7,22 +7,130 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 50px 8%;
 }
 
 .title {
-  margin: 0;
+  margin: 0 0 10px;
   font-size: 4rem;
+  align-self: center;
+  text-align: center;
+  line-height: 1;
 }
 
-.title,
 .description {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 1.2rem;
 }
 
-.description {
-  margin: 4rem 0;
+.stepContainer {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.stepNumber {
+  margin: 0 0 -5px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0070f3;
+}
+
+.stepName {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.stepDescription {
+  font-size: 1.1rem;
+  margin-top: 10px;
   line-height: 1.5;
-  font-size: 1.5rem;
+}
+
+.viewVideo {
+  border: 0;
+  background-color: #0070f3;
+  box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+  padding: 7px 20px;
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all ease-in-out 0.1s;
+  width: fit-content;
+  margin-top: 10px;
+}
+
+.viewVideo:hover {
+  background-color: #177df3;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px 0 rgb(0 118 255 / 39%);
+}
+
+.arrow {
+  margin-bottom: -3px;
+}
+
+.quizContainer {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px dashed rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.shortQuiz {
+  color: rgba(0, 0, 0, 0.35);
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.quizQuestion {
+  margin: 0 0 5px;
+}
+
+.quizOptionContainer {
+  background-color: white;
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 5px 20px;
+  border-radius: 10px;
+  margin: 10px 0 0;
+  text-align: left;
+  transition: all ease-in-out 0.1s;
+}
+
+.quizOptionContainer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  border-color: white;
+}
+
+.correctOption {
+  border: 2.25px solid #42bf34;
+}
+
+.correctOption:hover {
+  border: 2.25px solid #42bf34;
+  transform: translateY(0);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.incorrectOption {
+  border: 2.25px solid #f3000082;
+}
+
+.incorrectOption:hover {
+  border: 2.25px solid #f3000082;
+  transform: translateY(0);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+
+@media only screen and (min-width: 600px) {
+  .main {
+    padding: 50px 15%;
+  }
 }
