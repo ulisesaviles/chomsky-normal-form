@@ -72,10 +72,6 @@ const data = [
       question: ["Elige un ejemplo de regla unitaria:"],
       options: [
         {
-          name: <Rule rule="A → B" />,
-          isCorrect: true,
-        },
-        {
           name: <Rule rule="A → a" />,
           isCorrect: false,
         },
@@ -86,6 +82,10 @@ const data = [
         {
           name: <Rule rule="A → aBc" />,
           isCorrect: false,
+        },
+        {
+          name: <Rule rule="A → B" />,
+          isCorrect: true,
         },
       ],
     },
@@ -115,12 +115,12 @@ const data = [
       ],
       options: [
         {
-          name: <Rule rule="E → CD" />,
-          isCorrect: true,
-        },
-        {
           name: <Rule rule="E → BC" />,
           isCorrect: false,
+        },
+        {
+          name: <Rule rule="E → CD" />,
+          isCorrect: true,
         },
         {
           name: <Rule rule="E → A" />,
