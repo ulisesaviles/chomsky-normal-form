@@ -14,8 +14,23 @@ import YoutubeEmbed from "../components/YoutubeEmbed";
 // Data to render
 import steps from "../config/data";
 
+// Icons
+import { IoArrowForward } from "react-icons/io5";
+
 // Main component to export
 export default function Home() {
+  // Constants
+  const [selectedAnswers, setSelectedAnswers]: [null[] | number[], any] =
+    useState(steps.map((step) => null));
+
+  // Functions
+  const selectAnswer = (questionIndex: number, answerIndex: number) => {
+    let tempAnswers = [...selectedAnswers];
+    tempAnswers[questionIndex] = answerIndex;
+    setSelectedAnswers(tempAnswers);
+  };
+
+  // JSX to render
   return (
     <div className={styles.container}>
       {/* Metadata */}
@@ -53,21 +68,39 @@ export default function Home() {
         {steps.map((step) => (
           <div className={styles.stepContainer} key={step.stepName}>
             {/* Number */}
-            <h4 className={styles.stepNumber}>Step {step.stepNumber}</h4>
+            <h4 className={styles.stepNumber}>Paso {step.stepNumber}</h4>
             {/* Title */}
             <h2 className={styles.stepName}>{step.stepName}</h2>
             {/* Description */}
             <div className={styles.stepDescription}>{step.description}</div>
             {/* Video */}
-            <YoutubeEmbed embedId={step.videoUrl} />
+            <button className={styles.viewVideo}>
+              Ver video <IoArrowForward className={styles.arrow} />
+            </button>
             {/* Quiz */}
             <div className={styles.quizContainer}>
+              <h6 className={styles.shortQuiz}>Pequeño quiz:</h6>
               <h3 className={styles.quizQuestion}>{step.quiz.question}</h3>
-              {step.quiz.options.map((option) => (
-                <div key={option.name} className={styles.quizOptionContainer}>
-                  {option.name}
-                </div>
-              ))}
+              {step.quiz.options.map((option) => {
+                const optionIndex = step.quiz.options.indexOf(option);
+                return (
+                  <button
+                    onClick={() => selectAnswer(step.stepNumber, optionIndex)}
+                    key={option.name}
+                    className={`${styles.quizOptionContainer} ${
+                      selectedAnswers[step.stepNumber] === optionIndex &&
+                      option.isCorrect
+                        ? styles.correctOption
+                        : selectedAnswers[step.stepNumber] === optionIndex &&
+                          !option.isCorrect
+                        ? styles.incorrectOption
+                        : null
+                    }`}
+                  >
+                    {option.name}
+                  </button>
+                );
+              })}
             </div>
           </div>
         ))}
