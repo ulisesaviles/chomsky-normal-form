@@ -7,7 +7,20 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 50px 8%;
+  padding: 30px 8%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-bottom: 20px;
+  padding: 5px 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .title {
@@ -85,14 +98,16 @@
 .shortQuiz {
   color: rgba(0, 0, 0, 0.35);
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .quizQuestion {
   margin: 0 0 5px;
+  font-size: 1.2rem;
 }
 
 .quizOptionContainer {
+  font-size: 1rem;
   background-color: white;
   border: 1.5px solid rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -101,6 +116,10 @@
   margin: 10px 0 0;
   text-align: left;
   transition: all ease-in-out 0.1s;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: black;
 }
 
 .quizOptionContainer:hover {
@@ -131,6 +150,6 @@
 
 @media only screen and (min-width: 600px) {
   .main {
-    padding: 50px 15%;
+    padding: 40px 15%;
   }
 }

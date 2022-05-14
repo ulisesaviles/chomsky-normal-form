@@ -45,6 +45,12 @@ export default function Home() {
 
       {/* Content */}
       <main className={styles.main}>
+        {/* Header */}
+        <header className={styles.header}>
+          <div>T031438</div>
+          <div>T032069</div>
+        </header>
+
         {/* Title */}
         <h1 className={styles.title}>Forma normal de Chomsky</h1>
 
@@ -97,7 +103,16 @@ export default function Home() {
                         : null
                     }`}
                   >
-                    {option.name}
+                    <div>{option.name}</div>
+                    <div>
+                      {selectedAnswers[step.stepNumber] === optionIndex &&
+                      option.isCorrect
+                        ? "✅"
+                        : selectedAnswers[step.stepNumber] === optionIndex &&
+                          !option.isCorrect
+                        ? "❌"
+                        : null}
+                    </div>
                   </button>
                 );
               })}
