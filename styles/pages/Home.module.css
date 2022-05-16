@@ -1,5 +1,7 @@
 .container {
   padding: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .main {
@@ -153,4 +155,39 @@
   .main {
     padding: 40px 15%;
   }
+}
+
+.popupBackground {
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(60, 60, 60, 0.3);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+.closeVideo {
+  position: relative;
+  top: -10px;
+  left: -5vw;
+  border: 0;
+  background-color: #0070f3;
+  box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+  width: 40px;
+  height: 40px;
+  color: white;
+  border-radius: 20px;
+  font-size: 20px;
+  transition: all ease-in-out 0.1s;
+  margin-top: 10px;
+}
+
+.closeVideo:hover {
+  background-color: #177df3;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px 0 rgb(0 118 255 / 39%);
 }
