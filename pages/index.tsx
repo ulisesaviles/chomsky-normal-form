@@ -15,7 +15,7 @@ import YoutubeEmbed from "../components/YoutubeEmbed";
 import steps from "../config/data";
 
 // Icons
-import { IoArrowForward } from "react-icons/io5";
+import { IoArrowForward, IoClose } from "react-icons/io5";
 
 // Main component to export
 export default function Home() {
@@ -23,16 +23,40 @@ export default function Home() {
   const [selectedAnswers, setSelectedAnswers]: [null[] | number[], any] =
     useState(steps.map((step) => null));
 
+  const [popupIsDisplayed, setPopupIsDisplayed] = useState(true);
+  const [videoUrl, setVideoUrl] = useState("");
+
   // Functions
+  const hidePopup = () => {
+    setPopupIsDisplayed(false);
+  };
+
   const selectAnswer = (questionIndex: number, answerIndex: number) => {
     let tempAnswers = [...selectedAnswers];
     tempAnswers[questionIndex] = answerIndex;
     setSelectedAnswers(tempAnswers);
   };
 
+  const showPopUp = (index: number) => {
+    setVideoUrl(steps[index].videoUrl);
+    setPopupIsDisplayed(true);
+  };
+
   // JSX to render
   return (
     <div className={styles.container}>
+      {/* Popup */}
+      {popupIsDisplayed ? (
+        <div className={styles.popupBackground} onClick={hidePopup}>
+          <div className={styles.popupContainer}>
+            <button className={styles.closeVideo} onClick={hidePopup}>
+              <IoClose className={styles.arrow} />
+            </button>
+            <YoutubeEmbed embedId={videoUrl} />
+          </div>
+        </div>
+      ) : null}
+
       {/* Metadata */}
       <Head>
         <title>Forma normal de Chomsky</title>
@@ -80,7 +104,10 @@ export default function Home() {
             {/* Description */}
             <div className={styles.stepDescription}>{step.description}</div>
             {/* Video */}
-            <button className={styles.viewVideo}>
+            <button
+              className={styles.viewVideo}
+              onClick={() => showPopUp(step.stepNumber - 1)}
+            >
               Ver video <IoArrowForward className={styles.arrow} />
             </button>
             {/* Quiz */}
