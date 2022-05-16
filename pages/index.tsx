@@ -23,7 +23,7 @@ export default function Home() {
   const [selectedAnswers, setSelectedAnswers]: [null[] | number[], any] =
     useState(steps.map((step) => null));
 
-  const [popupIsDisplayed, setPopupIsDisplayed] = useState(true);
+  const [popupIsDisplayed, setPopupIsDisplayed] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
 
   // Functions
