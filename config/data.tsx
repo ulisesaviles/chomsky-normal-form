@@ -5,9 +5,9 @@ import Rule from "../components/rule";
 const data = [
   {
     stepNumber: 1,
-    stepName: "Variable inicial",
+    stepName: "Variable inicial.",
     description: [
-      "Se agrega una nueva variable inicial S0 y la regla",
+      "Se agrega una nueva variable inicial S0 y la regla ",
       <Rule rule="S0 → S" key={1} />,
       ", donde S es la variable inicial original.",
     ],
@@ -36,7 +36,9 @@ const data = [
       <br key={3} />,
       "Si ",
       <Rule rule="R → uAw" key={5} />,
-      ", agregamos R → uw",
+      ", agregamos ",
+      <Rule rule="R → uAw" key={5} />,
+      ".",
     ],
     videoUrl: "RVAG07-MwgI",
     quiz: {
@@ -135,7 +137,7 @@ const data = [
   },
   {
     stepNumber: 5,
-    stepName: "Removemos terminales juntas con variables.",
+    stepName: "Remover terminales juntas con variables.",
     description: [
       "Cambiar cada terminal α por A y agregamos la regla ",
       <Rule rule="A → α" key={1} />,
