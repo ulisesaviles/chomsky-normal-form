@@ -11,7 +11,7 @@ const data = [
       <Rule rule="S0 → S" key={1} />,
       ", donde S es la variable inicial original.",
     ],
-    videoUrl: "haBzn2EL63U",
+    videoUrl: "3uDeugplQQk",
     quiz: {
       question: ["¿S0 debe producir la variable inicial original?"],
       options: [
@@ -38,7 +38,7 @@ const data = [
       <Rule rule="R → uAw" key={5} />,
       ", agregamos R → uw",
     ],
-    videoUrl: "haBzn2EL63U",
+    videoUrl: "RVAG07-MwgI",
     quiz: {
       question: [
         "Una vez removida la ocurrencia de la variable que produce la cadena vacía, ¿qué hay que hacer?",
@@ -67,7 +67,7 @@ const data = [
       <Rule rule="A → u" key={5} />,
       ".",
     ],
-    videoUrl: "haBzn2EL63U",
+    videoUrl: "",
     quiz: {
       question: ["Elige un ejemplo de regla unitaria:"],
       options: [
@@ -92,9 +92,9 @@ const data = [
   },
   {
     stepNumber: 4,
-    stepName: "Transformamos reglas con tres o más elementos",
+    stepName: "Transformar reglas con tres o más elementos",
     description: [
-      "Remplazamos cada regla del tipo ",
+      "Reemplazar cada regla del tipo ",
       <Rule rule="A → U1 U2 U3…Uk" key={1} />,
       ", k >= 3 con las reglas ",
       <Rule rule="A1 → U1 A2" key={3} />,
@@ -104,7 +104,7 @@ const data = [
       <Rule rule="A(k-2) → U(k-1)Ak" key={7} />,
       ".",
     ],
-    videoUrl: "haBzn2EL63U",
+    videoUrl: "",
     quiz: {
       question: [
         "Si ",
@@ -141,7 +141,7 @@ const data = [
       <Rule rule="A → α" key={1} />,
       ".",
     ],
-    videoUrl: "haBzn2EL63U",
+    videoUrl: "HR87yrEZaXk",
     quiz: {
       question:
         "¿Qué se hace en el caso de que se necesite crear una variable para la terminal α, pero la variable A ya existe?",
