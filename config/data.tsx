@@ -69,7 +69,7 @@ const data = [
       <Rule rule="A → u" key={5} />,
       ".",
     ],
-    videoUrl: "",
+    videoUrl: "VH70z_MiPIo",
     quiz: {
       question: ["Elige un ejemplo de regla unitaria:"],
       options: [
@@ -106,7 +106,7 @@ const data = [
       <Rule rule="A(k-2) → U(k-1)Ak" key={7} />,
       ".",
     ],
-    videoUrl: "",
+    videoUrl: "buj2gJsLamg",
     quiz: {
       question: [
         "Si ",
