@@ -37,7 +37,7 @@ const data = [
       "Si ",
       <Rule rule="R → uAw" key={5} />,
       ", agregamos ",
-      <Rule rule="R → uAw" key={5} />,
+      <Rule rule="R → uw" key={7} />,
       ".",
     ],
     videoUrl: "RVAG07-MwgI",
